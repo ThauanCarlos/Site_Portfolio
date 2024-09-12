@@ -1,0 +1,78 @@
+/* Define a fonte base para rem */
+html {
+    font-size: 16px; /* Define a base para rem */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* Define a cor de fundo do site como branca */
+    color: black; /* Define a cor do texto como preta */
+}
+
+header {
+    background-color: white; /* Define a cor de fundo do header como branca */
+    padding: 1rem;
+    border-bottom: 1px solid #ddd; /* Opcional: Adiciona uma borda sutil para separar o header do conteúdo */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens para que um fique à esquerda e o outro à direita */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    max-width: 1200px; /* Define uma largura máxima para o contêiner */
+    margin: 0 auto; /* Centraliza o contêiner no meio da página */
+    position: relative;
+}
+
+.navbar .brand {
+    margin-left: 20px; /* Adiciona margem esquerda para afastar da borda */
+    flex: 1; /* Permite que o link "Thauan Carlos" ocupe o máximo de espaço possível à esquerda */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os links */
+    margin-right: 20px; /* Adiciona margem direita para afastar da borda */
+}
+
+.navbar a {
+    color: black; /* Define a cor dos links como preta */
+    text-decoration: none;
+    font-size: 1rem; /* 16px */
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+h1, h2 {
+    font-size: 2rem; /* Ajuste o tamanho do texto conforme necessário */
+}
+
+/* Consultas de mídia para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
